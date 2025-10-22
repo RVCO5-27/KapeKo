@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* Modern Kapeko Coffee SPA Styles */
 :root {
   --primary-color: #8B4513;
@@ -760,3 +761,767 @@ footer a {
     color: #adb5bd !important;
   }
 }
+=======
+/* Modern Kapeko Coffee SPA Styles */
+:root {
+  --primary-color: #8B4513;
+  --secondary-color: #D2691E;
+  --accent-color: #FFC107;
+  --dark-color: #2C1810;
+  --light-color: #F5F5DC;
+  --gradient-primary: linear-gradient(135deg, #8B4513 0%, #D2691E 100%);
+  --gradient-secondary: linear-gradient(135deg, #FFC107 0%, #FF8C00 100%);
+  --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.1);
+  --shadow-hover: 0 15px 40px rgba(0, 0, 0, 0.15);
+  --border-radius: 15px;
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+  min-height: 100vh;
+  line-height: 1.6;
+  color: #2c2c2c;
+}
+
+/* Enhanced Layout Structure */
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+/* Modern Navbar */
+.navbar {
+  background: var(--gradient-primary) !important;
+  backdrop-filter: blur(10px);
+  box-shadow: var(--shadow-soft);
+  transition: var(--transition);
+  padding: 1rem 0;
+}
+
+
+.navbar-brand {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  display: flex !important;
+  align-items: center !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  transition: var(--transition);
+  color: white !important;
+  background: none !important;
+  -webkit-background-clip: unset !important;
+  -webkit-text-fill-color: unset !important;
+  background-clip: unset !important;
+}
+
+.navbar-brand:hover {
+  transform: scale(1.05);
+}
+
+.nav-link {
+  font-weight: 500;
+  padding: 0.75rem 1.25rem !important;
+  border-radius: 25px;
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.nav-link::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: var(--gradient-secondary);
+  transition: var(--transition);
+  z-index: -1;
+}
+
+.nav-link:hover::before,
+.nav-link.active::before {
+  left: 0;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--dark-color) !important;
+  transform: translateY(-2px);
+}
+
+/* Enhanced Cards */
+.card {
+  border: none;
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: var(--transition);
+  overflow: hidden;
+  background: #FFFFFF;
+  backdrop-filter: blur(10px);
+  border: 1px solid #dee2e6;
+}
+
+.card-header {
+  background-color: #f8f9fa !important;
+  border-bottom: 1px solid #dee2e6 !important;
+}
+
+.card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: var(--shadow-hover);
+}
+
+.card-img-top {
+  transition: var(--transition);
+  height: 200px;
+  object-fit: cover;
+}
+
+.card:hover .card-img-top {
+  transform: scale(1.1);
+}
+
+/* Modern Buttons */
+.btn {
+  border-radius: 25px;
+  font-weight: 600;
+  padding: 0.75rem 2rem;
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-warning {
+  background: var(--gradient-secondary);
+  border: none;
+  color: var(--dark-color);
+  box-shadow: 0 4px 15px rgba(255, 193, 7, 0.3);
+}
+
+.btn-warning:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(255, 193, 7, 0.4);
+  color: var(--dark-color);
+}
+
+.btn-outline-warning {
+  border: 2px solid var(--accent-color);
+  color: var(--accent-color);
+  background: transparent;
+}
+
+.btn-outline-warning:hover {
+  background: var(--gradient-secondary);
+  border-color: transparent;
+  color: var(--dark-color);
+  transform: translateY(-3px);
+}
+
+/* Enhanced Forms */
+.form-control {
+  border-radius: 10px;
+  border: 2px solid #e9ecef;
+  padding: 0.75rem 1rem;
+  transition: var(--transition);
+  background: #e6e5e5;
+  color: #4a4a4a;
+}
+
+.form-control:focus {
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 0.2rem rgba(255, 193, 7, 0.25);
+  background: #000000;
+  color: #4a4a4a;
+  transform: translateY(-2px);
+}
+
+.form-select {
+  border-radius: 10px;
+  border: 2px solid #e9ecef;
+  transition: var(--transition);
+  background: #e6e5e5;
+  color: #4a4a4a;
+  transform: translateY(-2px);
+}
+
+.form-select:focus {
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 0.2rem rgba(255, 193, 7, 0.25);
+  background: #000000;
+  color: #4a4a4a;
+}
+
+.table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 10px;
+  background: transparent;
+}
+
+.table thead th {
+  background: var(--gradient-primary);
+  color: #fff;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 1rem;
+  border: none;
+  letter-spacing: 0.5px;
+}
+
+.table tbody tr {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  transition: var(--transition);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.table tbody tr:hover {
+  transform: scale(1.01);
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: var(--shadow-hover);
+}
+
+.table td {
+  padding: 1rem;
+  vertical-align: middle;
+  border-top: none;
+  color: #000000 !important;
+  font-weight: 500;
+}
+
+.table td:first-child {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.table td:last-child {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+/* Align text properly */
+.table th,
+.table td {
+  text-align: center;
+}
+
+/* Buttons inside the table */
+.table .btn {
+  border-radius: 8px;
+  padding: 0.4rem 0.6rem;
+  font-size: 0.9rem;
+}
+
+.table .btn-outline-secondary {
+  border: 2px solid #ccc;
+  color: #fff;
+  background: transparent;
+  transition: var(--transition);
+}
+
+.table .btn-outline-secondary:hover {
+  background: var(--accent-color);
+  color: var(--dark-color);
+  transform: scale(1.05);
+}
+
+/* Delete button */
+.table .btn-danger {
+  background: #dc3545;
+  border: none;
+  transition: var(--transition);
+}
+
+.table .btn-danger:hover {
+  background: #ff4d5a;
+  transform: scale(1.05);
+}
+
+/* Table responsive container */
+.table-responsive {
+  overflow-x: auto;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-soft);
+  padding: 0.5rem;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* Empty cart message */
+.text-muted {
+  font-size: 1.1rem;
+  font-style: italic;
+  color: #ddd !important;
+}
+
+/* Total price emphasis */
+.table .fw-bold {
+  color: var(--accent-color) !important;
+  font-weight: 700;
+}
+
+/* Modern Alerts */
+.alert {
+  border-radius: var(--border-radius);
+  border: none;
+  box-shadow: var(--shadow-soft);
+  backdrop-filter: blur(10px);
+}
+
+.alert-success {
+  background: linear-gradient(135deg, #d4edda 0%, #c3e6cb 100%);
+  color: #155724;
+}
+
+/* Enhanced Hero Section */
+.hero {
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-soft);
+  transition: var(--transition);
+  max-width: 100%;
+  height: auto;
+}
+
+.hero:hover {
+  transform: scale(1.02);
+  box-shadow: var(--shadow-hover);
+}
+
+/* Modern Footer */
+footer {
+  background: var(--gradient-primary);
+  color: white;
+  text-align: center;
+  padding: 3rem 0;
+  margin-top: 4rem;
+  position: relative;
+  overflow: hidden;
+}
+
+footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: var(--gradient-secondary);
+}
+
+/* Enhanced Badges */
+.badge {
+  font-size: 1rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 25px;
+  font-weight: 600;
+  box-shadow: 0 4px 15px rgba(255, 193, 7, 0.3);
+}
+
+/* Smooth Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.slide-in-right {
+  animation: slideInRight 0.6s ease-out;
+}
+
+/* Page Transitions */
+.page-enter {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.page-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.page-exit {
+  opacity: 1;
+}
+
+.page-exit-active {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* Coffee Shop Specific Styles */
+.coffee-bean {
+  color: var(--primary-color);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.coffee-cup {
+  color: var(--secondary-color);
+}
+
+/* Enhanced Container */
+.container {
+  position: relative;
+}
+
+/* Loading States */
+.loading {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+/* Interactive Elements */
+.interactive {
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.interactive:hover {
+  transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero {
+    max-height: 250px;
+    object-fit: cover;
+  }
+  
+  .card {
+    margin-bottom: 1.5rem;
+  }
+  
+  .navbar-brand {
+    font-size: 1.5rem;
+  }
+  
+  .btn {
+    padding: 0.6rem 1.5rem;
+    font-size: 0.9rem;
+  }
+  
+  main {
+    padding-top: 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    padding: 0 1rem;
+  }
+  
+  .card {
+    margin-bottom: 1rem;
+  }
+  
+  .btn {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+}
+
+/* Enhanced Text Contrast - Consistent Colors */
+.text-muted {
+  color: #6c757d !important;
+}
+
+.text-dark {
+  color: #2C1810 !important;
+}
+
+/* Make all text elements more visible */
+body {
+  color: #f5f5f5 !important;
+}
+
+.card {
+  color: #f5f5f5 !important;
+}
+
+.card-text {
+  color: #f5f5f5 !important;
+  font-weight: 500;
+}
+
+.card-title {
+  color: #f5f5f5 !important;
+}
+
+/* Make all text elements very visible */
+.text-dark {
+  color: #f5f5f5 !important;
+}
+
+.text-muted {
+  color: #e0e0e0 !important;
+}
+
+/* Make paragraphs and small text very visible */
+span, div, small {
+  color: #f5f5f5 !important;
+}
+
+/* Make all headings visible */
+h1, h3, h4, h6 {
+  color: #f5f5f5 !important;
+  font-weight: bold;
+}
+
+h2 {
+  color: #f5f5f5 !important;
+  font-weight: bold;
+}
+
+h5 {
+  color: #f5f5f5 !important;
+  font-weight: bold;
+}
+
+/* Apply visible color to all text */
+* {
+  color: #f5f5f5 !important;
+}
+
+/* Fix icon colors - make them more vibrant */
+.fas, .far, .fab {
+  color: #6f4e37 !important;
+}
+
+/* Coffee bean icon */
+.coffee-bean {
+  color: #8B4513 !important;
+}
+
+/* Coffee cup icon */
+.coffee-cup {
+  color: #8B4513 !important;
+}
+
+/* Leaf icon */
+.fa-leaf {
+  color: #28a745 !important;
+}
+
+/* Home icon */
+.fa-home {
+  color: #6f4e37 !important;
+}
+
+/* Users icon */
+.fa-users {
+  color: #6f4e37 !important;
+}
+
+/* Coffee icon */
+.fa-coffee {
+  color: #8B4513 !important;
+}
+
+/* Map marker icon */
+.fa-map-marker-alt {
+  color: #dc3545 !important;
+}
+
+/* Star icon */
+.fa-star {
+  color: #FFC107 !important;
+}
+
+/* Exception for navbar and footer */
+.navbar-nav .nav-link {
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+  color: #000000 !important;
+}
+
+footer, footer * {
+  color: white !important;
+}
+
+footer a {
+  color: #FFC107 !important;
+}
+
+/* Exception for warning text */
+.text-warning {
+  color: #FFC107 !important;
+}
+
+/* Exception for success text */
+.alert-success {
+  color: #155724 !important;
+}
+
+/* Make card headers more visible */
+.card-header h5 {
+  color: #333333 !important;
+  font-weight: bold;
+}
+
+/* Make form placeholders visible */
+.form-control::placeholder {
+  color: #666666 !important;
+  opacity: 1;
+}
+
+.form-select::placeholder {
+  color: #666666 !important;
+  opacity: 1;
+}
+
+/* Fix navbar text */
+.navbar-nav .nav-link {
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+  color: #2C1810 !important;
+}
+
+/* Logo styling */
+.navbar-brand img {
+  transition: transform 0.3s ease;
+}
+
+.navbar-brand:hover img {
+  transform: scale(1.1);
+}
+
+/* Ensure icons display properly with good contrast */
+.navbar-brand i {
+  font-size: 1.3em !important;
+  line-height: 1;
+  display: inline-block !important;
+  vertical-align: middle;
+  color: #FFC107 !important;
+  text-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.3));
+  opacity: 1 !important;
+  visibility: visible !important;
+  margin-right: 8px !important;
+}
+
+.navbar-brand:hover i {
+  color: #FFD700 !important;
+  transform: scale(1.1);
+  transition: all 0.3s ease;
+}
+
+.navbar-brand span {
+  color: white !important;
+  font-weight: bold !important;
+}
+
+/* Fallback emoji styling */
+.fallback-emoji {
+  font-size: 1.3em !important;
+  color: #FFC107 !important;
+  margin-right: 8px !important;
+}
+
+/* Show fallback if Font Awesome fails to load */
+.navbar-brand i:not(.fa-coffee) + .fallback-emoji {
+  display: inline-block !important;
+}
+
+/* Fix footer text */
+footer {
+  color: white !important;
+}
+
+footer p, footer h5, footer h6 {
+  color: white !important;
+}
+
+footer a {
+  color: #FFC107 !important;
+}
+
+/* Fix modal text */
+.modal-content {
+  color: #2C1810 !important;
+}
+
+.modal-title {
+  color: #2C1810 !important;
+}
+
+/* Fix alert text */
+.alert {
+  color: inherit !important;
+}
+
+.alert-success {
+  color: #155724 !important;
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --light-color: #1a1a1a;
+    --dark-color: #f5f5f5;
+  }
+  
+  body {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+    color: #f5f5f5;
+  }
+  
+  .card {
+    background: rgba(45, 45, 45, 0.95);
+    color: #f5f5f5;
+  }
+  
+  .form-control {
+    background: rgba(45, 45, 45, 0.9);
+    color: #f5f5f5;
+    border-color: #555;
+  }
+  
+  .form-select {
+    background: rgba(45, 45, 45, 0.9);
+    color: #f5f5f5;
+    border-color: #555;
+  }
+  
+  .text-muted {
+    color: #adb5bd !important;
+  }
+}
+>>>>>>> 289777a7789e9e825f38c158b92b8748c62eae01
